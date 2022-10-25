@@ -9,8 +9,6 @@ import {
 import { Box } from "@mui/system"
 import { Link as LinkRouter } from "react-router-dom"
 
-import { toast } from "react-toastify"
-
 import "./style.css"
 
 const Home = () => {

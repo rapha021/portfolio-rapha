@@ -38,23 +38,23 @@ const About = () => {
             justifyContent="center"
           >
             <Grow in={true} {...{ timeout: 1000 }}>
-              <img src="src/assets/icons/react.svg" className="techIcon" />
+              <img src="assets/icons/react.svg" className="techIcon" />
             </Grow>
 
             <Grow in={true} {...{ timeout: 1200 }}>
-              <img src="src/assets/icons/ts.svg" className="techIcon" />
+              <img src="assets/icons/ts.svg" className="techIcon" />
             </Grow>
 
             <Grow in={true} {...{ timeout: 1400 }}>
-              <img src="src/assets/icons/node.svg" className="techIcon" />
+              <img src="assets/icons/node.svg" className="techIcon" />
             </Grow>
 
             <Grow in={true} {...{ timeout: 1600 }}>
-              <img src="src/assets/icons/materialui.svg" className="techIcon" />
+              <img src="assets/icons/materialui.svg" className="techIcon" />
             </Grow>
 
             <Grow in={true} {...{ timeout: 1800 }}>
-              <img src="src/assets/icons/git.svg" className="techIcon" />
+              <img src="assets/icons/git.svg" className="techIcon" />
             </Grow>
           </Stack>
         </Stack>

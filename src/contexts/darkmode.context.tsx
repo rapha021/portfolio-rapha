@@ -43,7 +43,7 @@ const ThemeProvider = ({ children }: IThemeProps) => {
       h5: { color: dark ? "#fff" : "#333" },
     },
   })
-  theme = responsiveFontSizes(theme)
+  // theme = responsiveFontSizes(theme)
 
   return (
     <ThemeContext.Provider value={{ dark, setDark, handleTheme, theme }}>

@@ -1,11 +1,4 @@
-import {
-  Button,
-  ButtonGroup,
-  Fade,
-  Grid,
-  Link,
-  Typography,
-} from "@mui/material"
+import { Button, Fade, Grid, Link, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { Link as LinkRouter } from "react-router-dom"
 
@@ -20,19 +13,40 @@ const Home = () => {
             item
             display="flex"
             flexDirection="column"
-            gap="10px"
+            gap="20px"
             justifyContent="center"
             alignItems="center"
           >
-            <Typography variant="h2" component="h3" color="#fff">
-              Olá, me chamo Raphael !
-            </Typography>
+            <Box textAlign="center">
+              <Typography
+                variant="h2"
+                component="h3"
+                color="#fff"
+                fontFamily="'audrey', sans-serif"
+                fontSize={{ xs: "60px", md: "80px" }}
+                lineHeight="1"
+                fontWeight="bold"
+              >
+                RAPHAEL SILVA
+              </Typography>
 
-            <Typography variant="body1" color="#fff">
-              e sou desenvolvedor FullStack
-            </Typography>
+              <Typography
+                variant="body1"
+                color="#fff"
+                fontFamily="'simplifica', sans-serif"
+                fontSize={{ xs: "20px", md: "40px" }}
+                lineHeight="0.8"
+              >
+                DESENVOLDOR FULLSTACK
+              </Typography>
+            </Box>
 
-            <Box gap="15px" display="flex">
+            <Box
+              gap="15px"
+              display="flex"
+              flexWrap="wrap"
+              justifyContent="center"
+            >
               <Button
                 variant="contained"
                 size="large"

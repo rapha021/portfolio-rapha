@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "simplifica";
+  src: url(fonts/SIMPLIFICA.ttf);
+}
+@font-face {
+  font-family: "audrey";
+  src: url(fonts/Audrey.otf);
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -7,7 +16,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url(background.jpg);
+  background-image: url(assets/background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

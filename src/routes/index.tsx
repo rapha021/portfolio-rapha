@@ -7,10 +7,10 @@ const MainRoutes = () => {
   return (
     <>
       <Routes>
-        <Route index element={<Home />} />
+        <Route path="*" element={<>404</>} />
+        <Route index path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<>404</>} />
       </Routes>
     </>
   )

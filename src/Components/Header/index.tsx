@@ -61,9 +61,9 @@ const Header = () => {
               <Tab
                 label="Home"
                 icon={<CottageIcon />}
-                value="/"
+                value="/home"
                 component={LinkRouter}
-                to="/"
+                to="/home"
               />
 
               <Tab
@@ -117,7 +117,7 @@ const Header = () => {
             >
               <ListItemButton
                 onClick={() => {
-                  navigate("/")
+                  navigate("/home")
                   setOpen(false)
                 }}
                 selected={location === "/"}

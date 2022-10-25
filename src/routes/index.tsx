@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import About from "../Pages/About"
 import Home from "../Pages/Home"
 import Projects from "../Pages/Projects"
@@ -8,6 +8,7 @@ const MainRoutes = () => {
     <>
       <Routes>
         <Route path="*" element={<>404</>} />
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />

@@ -1,1 +1,6 @@
-{"orgId":"qL6JfPnkO9O07oxAGpUECnhi","projectId":"prj_qQbG456tGjT4qWkYD8hPWzxKyI0o", {"rewrites": [{ "source": "/(.*)", "destination": "/" }]}}
+{"orgId":"qL6JfPnkO9O07oxAGpUECnhi","projectId":"prj_qQbG456tGjT4qWkYD8hPWzxKyI0o", {
+  "rewrites":  [
+    {"source": "/(.*)", "destination": "/"},
+    {"source": "/(.*)", "destination": "/about"}
+  ]
+}}

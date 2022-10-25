@@ -7,11 +7,13 @@ import { ToastContainer } from "react-toastify"
 
 import "./index.css"
 import "react-toastify/dist/ReactToastify.css"
+import MainRoutes from "./routes/routes"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
     <ToastContainer />
     <ThemeProvider>
+      <MainRoutes />
       <App />
     </ThemeProvider>
   </BrowserRouter>

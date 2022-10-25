@@ -3,7 +3,7 @@ import Header from "./Components/Header"
 import ThemeButton from "./Components/ThemeButton"
 import { useThemeContext } from "./contexts/darkmode.context"
 import GlobalStyle, { Container } from "./globalStyle"
-import MainRoutes from "./routes"
+import MainRoutes from "./routes/routes"
 
 function App() {
   const { dark, setDark, handleTheme, theme } = useThemeContext()
@@ -16,7 +16,7 @@ function App() {
         <Container>
           <Header />
 
-          <MainRoutes />
+          
 
           <ThemeButton />
         </Container>

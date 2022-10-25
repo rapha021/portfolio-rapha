@@ -23,7 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-tsconfig.json
-tsconfig.node.json
-vite.config.ts
-.vercel

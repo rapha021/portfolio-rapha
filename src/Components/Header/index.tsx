@@ -53,7 +53,6 @@ const Header = () => {
           sx={{
             backgroundColor: dark ? "#333" : "#fff",
             width: "fit-content",
-            height: "100vh",
           }}
         >
           <Grid item>

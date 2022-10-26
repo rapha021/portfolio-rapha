@@ -53,7 +53,6 @@ const Header = () => {
           sx={{
             backgroundColor: dark ? "#333" : "#fff",
             width: "fit-content",
-            height: "100vh",
           }}
         >
           <Grid item>
@@ -68,7 +67,7 @@ const Header = () => {
 
               <Tab
                 label="About"
-                icon={<InfoIcon id="/about" />}
+                icon={<InfoIcon />}
                 value="/about"
                 component={LinkRouter}
                 to="/about"
@@ -78,7 +77,7 @@ const Header = () => {
                 label="Contact"
                 icon={
                   <Badge badgeContent="!" color="warning">
-                    <EmailIcon id="/contact" />
+                    <EmailIcon />
                   </Badge>
                 }
                 value="/contact"
@@ -89,10 +88,28 @@ const Header = () => {
 
               <Tab
                 label="Projects"
-                icon={<InventoryIcon id="/projects" />}
+                icon={<InventoryIcon />}
                 value="/projects"
                 component={LinkRouter}
                 to="/projects"
+              />
+
+              <Divider />
+
+              <Tab
+                label="GitHub"
+                icon={<GitHubIcon />}
+                component={Link}
+                href="https://github.com/rapha021/"
+                target="_blank"
+              />
+
+              <Tab
+                label="LinkedIn"
+                icon={<LinkedInIcon />}
+                component={Link}
+                href="https://linkedin.com/in/raphaelgloria/"
+                target="_blank"
               />
             </Tabs>
           </Grid>

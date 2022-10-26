@@ -10,6 +10,7 @@ import {
   Link,
   Typography,
 } from "@mui/material"
+import { useThemeContext } from "../../contexts/darkmode.context"
 
 const CardProj = ({
   name,
@@ -19,24 +20,33 @@ const CardProj = ({
   img,
   description,
 }: IProject) => {
+  const { dark } = useThemeContext()
+
   return (
     <>
-      <Card sx={{ maxWidth: { xs: "250px", sm: "280px", md: "350px" } }}>
+      <Card
+        sx={{
+          maxWidth: { xs: "300px", md: "350px" },
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
         <CardMedia component="img" alt="project img" height="220" image={img} />
 
         <CardContent className="card-content">
           <div className="card__div--tags">
             {techs.map((tech, index) => (
-              <Chip key={index} label={tech} color="primary" size="small" />
+              <Chip
+                label={tech}
+                key={index}
+                color={dark ? "secondary" : "primary"}
+                size="small"
+              />
             ))}
           </div>
           <Typography variant="h5">{name}</Typography>
-          <Typography
-            variant="subtitle2"
-            component="h4"
-            color="text.secondary"
-            noWrap={true}
-          >
+          <Typography variant="subtitle2" component="h4" color="text.secondary">
             {description}
           </Typography>
         </CardContent>

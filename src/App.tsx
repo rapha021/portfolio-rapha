@@ -8,6 +8,12 @@ import MainRoutes from "./routes/routes"
 function App() {
   const { dark, setDark, handleTheme, theme } = useThemeContext()
 
+  const color = dark ? "#272727" : "#E91E63"
+
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute("content", color)
+
   return (
     <>
       <GlobalStyle dark={dark} palette={theme.palette} />

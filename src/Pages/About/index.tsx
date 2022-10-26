@@ -17,7 +17,7 @@ const About = () => {
           direction="column"
           spacing={2}
           height={{ xs: "90vh", md: "100vh" }}
-          width="100vw"
+          width="100%"
           alignItems="center"
           justifyContent="center"
         >

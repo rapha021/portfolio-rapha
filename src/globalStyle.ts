@@ -10,9 +10,9 @@ const GlobalStyle = createGlobalStyle<IProps>`
         background-color: ${(p) =>
           p.dark ? p.palette.background.default : "#f5f5f5"};
     }
+    *{transition: all 300ms}
 
    
-
 `
 
 export default GlobalStyle

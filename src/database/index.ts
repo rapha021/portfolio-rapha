@@ -18,7 +18,7 @@ export const projects: Array<IProject> = [
       "Context API",
     ],
     repo_link: "https://github.com/rapha021/kenziehub",
-    demo_link: "https://kenziehub-rapha021.vercel.app/",
+    demo_link: "http://kenziehub.raphaelgloria.com/",
     img: "assets/project_img/kenziehub.png",
     description:
       "Aplicação para gerenciamento de tecnologias que o usuario domina utilizando uma API Rest.",
@@ -42,7 +42,7 @@ export const projects: Array<IProject> = [
     name: "NuKenzie",
     techs: ["React", "Javascript", "Styled-Components"],
     repo_link: "https://github.com/rapha021/nukenzie",
-    demo_link: "https://nukenzie-rapha021.vercel.app/",
+    demo_link: "http://nukenzie.raphaelgloria.com/",
     img: "assets/project_img/nukenzie.png",
     description:
       "Nu Kenzie, uma aplicação para gerenciamento de gastos, cadastrando entradas e saídas.",
@@ -51,7 +51,7 @@ export const projects: Array<IProject> = [
     name: "Burguer Kenzie",
     techs: ["React", "Javascript", "Styled-Components"],
     repo_link: "https://github.com/rapha021/burguerkenzie",
-    demo_link: "https://hamburguerrp.vercel.app/",
+    demo_link: "http://burguerkenzie.raphaelgloria.com/",
     img: "assets/project_img/kenzieburguer.png",
     description:
       "Aplicação que simula um e-commerce de fast food utilizando uma API Rest.",
@@ -60,7 +60,7 @@ export const projects: Array<IProject> = [
     name: "Rapha Game Store",
     techs: ["Javascript", "DOM", "CSS3", "HTML5"],
     repo_link: "https://github.com/rapha021/marketplace",
-    demo_link: "https://marketplace-indol.vercel.app/",
+    demo_link: "http://gamestore.raphaelgloria.com/",
     img: "assets/project_img/gamestore.png",
     description:
       "Aplicação que simula um e-commerce de video games utilizando DOM no Javascript.",

@@ -1,4 +1,4 @@
-import { Grid, ThemeProvider } from "@mui/material"
+import { ThemeProvider } from "@mui/material"
 import Header from "./Components/Header"
 import ThemeButton from "./Components/ThemeButton"
 import { useThemeContext } from "./contexts/darkmode.context"
@@ -6,7 +6,7 @@ import GlobalStyle, { Container } from "./globalStyle"
 import MainRoutes from "./routes/routes"
 
 function App() {
-  const { dark, setDark, handleTheme, theme } = useThemeContext()
+  const { dark, theme } = useThemeContext()
 
   const color = dark ? "#272727" : "#E91E63"
 

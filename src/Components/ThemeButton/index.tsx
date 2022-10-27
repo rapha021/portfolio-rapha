@@ -1,32 +1,116 @@
-import { DarkMode, LightMode } from "@mui/icons-material"
-import { Fab, Slide } from "@mui/material"
+import {
+  DarkMode,
+  LightMode,
+  Download,
+  OpenInNew,
+  InsertDriveFile,
+} from "@mui/icons-material"
+import {
+  Backdrop,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Link,
+  SpeedDial,
+  SpeedDialAction,
+  SpeedDialIcon,
+} from "@mui/material"
+import { useState } from "react"
 import { useThemeContext } from "../../contexts/darkmode.context"
+
+interface IActions {
+  icon: JSX.Element
+  name: string
+  action: () => void
+}
 
 const ThemeButton = () => {
   const { dark, setDark, handleTheme } = useThemeContext()
+  const [open, setOpen] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
+
+  const actions: IActions[] = [
+    {
+      icon: <InsertDriveFile />,
+      name: "Currículo",
+      action: () => {
+        setOpenModal(true)
+      },
+    },
+    {
+      icon: dark ? <LightMode /> : <DarkMode />,
+      name: dark ? "Light" : "Dark",
+      action: () => {
+        setDark(!dark)
+        handleTheme()
+      },
+    },
+  ]
+
   return (
-    <Slide direction="left" in={true} timeout={800} unmountOnExit>
-      <Fab
-        size="large"
-        aria-label="darkmode"
+    <>
+      <Backdrop open={open} />
+      <SpeedDial
+        ariaLabel="Teste"
         sx={{
-          position: "fixed",
+          position: "absolute",
           bottom: "20px",
           right: "20px",
-          backgroundColor: !dark ? "#121212" : "#fff",
-          color: !dark ? "#fff" : "#121212",
-          ":hover": {
-            backgroundColor: !dark ? "#333" : "#e6e6e6",
-          },
         }}
-        onClick={() => {
-          setDark(!dark)
-          handleTheme()
-        }}
+        icon={<SpeedDialIcon />}
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
       >
-        {!dark ? <DarkMode /> : <LightMode />}
-      </Fab>
-    </Slide>
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            onClick={action.action}
+          />
+        ))}
+      </SpeedDial>
+
+      <Dialog
+        open={openModal}
+        onClose={() => {
+          setOpenModal(false)
+        }}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+      >
+        <DialogTitle id="modal-title">Meu currículo</DialogTitle>
+
+        <DialogContent>
+          <DialogContentText id="modal-desc">
+            Para facilitar escolha a melhor opção para você:
+          </DialogContentText>
+        </DialogContent>
+
+        <DialogActions>
+          <Link href="/assets/cv.docx" download underline="none">
+            <Button variant="text" endIcon={<Download />}>
+              Baixar
+            </Button>
+          </Link>
+
+          <Link
+            href="https://docs.google.com/document/d/1ps8mAgv4f5iAz5kmBRFpcpS5aBn_TnpMNcqFEm8ezaE/edit?usp=sharing"
+            underline="none"
+            target="_blank"
+          >
+            <Button variant="text" endIcon={<OpenInNew />}>
+              Abrir no Google Docs
+            </Button>
+          </Link>
+        </DialogActions>
+      </Dialog>
+    </>
   )
 }
 

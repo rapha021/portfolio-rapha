@@ -1,4 +1,4 @@
-import { Button, Fade, Grid, Link, Typography } from "@mui/material"
+import { Button, Fade, Grid, Grow, Link, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { Link as LinkRouter } from "react-router-dom"
 
@@ -47,32 +47,40 @@ const Home = () => {
               flexWrap="wrap"
               justifyContent="center"
             >
-              <Button
-                variant="contained"
-                size="large"
-                component={Link}
-                href="https://linkedin.com/in/raphaelgloria/"
-                target="_blank"
-              >
-                LinkedIn
-              </Button>
-              <Button
-                variant="contained"
-                size="large"
-                component={Link}
-                href="https://github.com/rapha021"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-              <Button
-                variant="contained"
-                size="large"
-                component={LinkRouter}
-                to="/contact"
-              >
-                Contato
-              </Button>
+              <Grow in={true} timeout={2000}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  component={Link}
+                  href="https://linkedin.com/in/raphaelgloria/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </Button>
+              </Grow>
+
+              <Grow in={true} timeout={1500}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  component={Link}
+                  href="https://github.com/rapha021"
+                  target="_blank"
+                >
+                  GitHub
+                </Button>
+              </Grow>
+
+              <Grow in={true} timeout={1000}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  component={LinkRouter}
+                  to="/contact"
+                >
+                  Contato
+                </Button>
+              </Grow>
             </Box>
           </Grid>
         </Grid>

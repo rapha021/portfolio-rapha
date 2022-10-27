@@ -1,11 +1,15 @@
-import { Fade, Grid, Typography } from "@mui/material"
+import { Fade, Grid, Grow, Typography } from "@mui/material"
 import CardProj from "../../Components/Card"
 import { useThemeContext } from "../../contexts/darkmode.context"
+
 import { projects } from "../../database"
 import { Container } from "./style"
 
 const Projects = () => {
   const { dark, theme } = useThemeContext()
+
+  let counter = 0
+
   return (
     <Fade in={true}>
       <Container dark={dark} palette={theme.palette}>
@@ -34,16 +38,22 @@ const Projects = () => {
             {projects.map((project, index) => {
               const { name, techs, demo_link, repo_link, img, description } =
                 project
+
+              counter += 500
               return (
-                <CardProj
-                  key={index}
-                  name={name}
-                  techs={techs}
-                  demo_link={demo_link}
-                  repo_link={repo_link}
-                  img={img}
-                  description={description}
-                />
+                <Grow in={true} timeout={counter} key={name}>
+                  <div>
+                    <CardProj
+                      key={index}
+                      name={name}
+                      techs={techs}
+                      demo_link={demo_link}
+                      repo_link={repo_link}
+                      img={img}
+                      description={description}
+                    />
+                  </div>
+                </Grow>
               )
             })}
           </Grid>

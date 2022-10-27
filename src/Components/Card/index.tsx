@@ -27,6 +27,7 @@ const CardProj = ({
       <Card
         sx={{
           maxWidth: { xs: "300px", md: "350px" },
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",

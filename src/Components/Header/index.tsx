@@ -5,6 +5,8 @@ import {
   Grid,
   IconButton,
   Link,
+  LinkProps,
+  LinkTypeMap,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -24,17 +26,29 @@ import InventoryIcon from "@mui/icons-material/Inventory"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 
-import { useState } from "react"
+import { ReactNode, useState } from "react"
 
 import { useLocation, useNavigate } from "react-router-dom"
 import { useThemeContext } from "../../contexts/darkmode.context"
 
 import { Link as LinkRouter } from "react-router-dom"
+import { OverridableComponent } from "@mui/material/OverridableComponent"
 
-interface TabPanelProps {
+interface ITabPanelProps {
   children?: React.ReactNode
   index: number
   value: number
+}
+
+interface ITabs {
+  label: string
+  icon: JSX.Element
+  value?: string
+  component: any
+  to?: string
+  disabled?: boolean
+  href?: string
+  target?: string
 }
 
 const Header = () => {
@@ -44,7 +58,60 @@ const Header = () => {
 
   const desktop = useMediaQuery("(min-width:1200px)")
 
-  const { dark, theme } = useThemeContext()
+  const { dark } = useThemeContext()
+
+  const tabs: ITabs[] = [
+    {
+      label: "Home",
+      icon: <CottageIcon />,
+      value: "/",
+      component: LinkRouter,
+      to: "/",
+      disabled: false,
+    },
+    {
+      label: "Sobre",
+      icon: <InfoIcon />,
+      value: "/about",
+      component: LinkRouter,
+      to: "/about",
+      disabled: false,
+    },
+    {
+      label: "Contato",
+      icon: (
+        <Badge badgeContent="!" color="warning">
+          <EmailIcon />
+        </Badge>
+      ),
+      value: "/contact",
+      component: LinkRouter,
+      to: "/contact",
+      disabled: false,
+    },
+    {
+      label: "Projetos",
+      icon: <InventoryIcon />,
+      value: "/projects",
+      component: LinkRouter,
+      to: "/projects",
+    },
+    {
+      label: "GitHub",
+      icon: <GitHubIcon />,
+      component: Link,
+      href: "https://github.com/rapha021/",
+      target: "_blank",
+    },
+    {
+      label: "LinkedIn",
+      icon: <LinkedInIcon />,
+      component: Link,
+      href: "https://linkedin.com/in/raphaelgloria/",
+      target: "_blank",
+    },
+  ]
+
   return (
     <>
       {desktop ? (
@@ -57,60 +124,19 @@ const Header = () => {
         >
           <Grid item>
             <Tabs value={location} variant="scrollable" orientation="vertical">
-              <Tab
-                label="Home"
-                icon={<CottageIcon />}
-                value="/"
-                component={LinkRouter}
-                to="/"
-              />
-
-              <Tab
-                label="Sobre"
-                icon={<InfoIcon />}
-                value="/about"
-                component={LinkRouter}
-                to="/about"
-              />
-
-              <Tab
-                label="Contato"
-                icon={
-                  <Badge badgeContent="!" color="warning">
-                    <EmailIcon />
-                  </Badge>
-                }
-                value="/contact"
-                component={LinkRouter}
-                to="/contact"
-                disabled
-              />
-
-              <Tab
-                label="Projeto"
-                icon={<InventoryIcon />}
-                value="/projects"
-                component={LinkRouter}
-                to="/projects"
-              />
-
-              <Divider />
-
-              <Tab
-                label="GitHub"
-                icon={<GitHubIcon />}
-                component={Link}
-                href="https://github.com/rapha021/"
-                target="_blank"
-              />
-
-              <Tab
-                label="LinkedIn"
-                icon={<LinkedInIcon />}
-                component={Link}
-                href="https://linkedin.com/in/raphaelgloria/"
-                target="_blank"
-              />
+              {tabs.map((tab) => (
+                <Tab
+                  label={tab.label}
+                  icon={tab.icon}
+                  value={tab.value}
+                  component={tab.component}
+                  to={tab.to}
+                  disabled={tab.disabled}
+                  href={tab.href}
+                  target={tab.target}
+                  key={tab.label}
+                />
+              ))}
             </Tabs>
           </Grid>
         </Grid>
@@ -164,7 +190,6 @@ const Header = () => {
                   setOpen(false)
                 }}
                 selected={location === "/contact"}
-                disabled
               >
                 <ListItemIcon>
                   <EmailIcon />

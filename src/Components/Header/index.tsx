@@ -66,7 +66,7 @@ const Header = () => {
               />
 
               <Tab
-                label="About"
+                label="Sobre"
                 icon={<InfoIcon />}
                 value="/about"
                 component={LinkRouter}
@@ -74,7 +74,7 @@ const Header = () => {
               />
 
               <Tab
-                label="Contact"
+                label="Contato"
                 icon={
                   <Badge badgeContent="!" color="warning">
                     <EmailIcon />
@@ -87,7 +87,7 @@ const Header = () => {
               />
 
               <Tab
-                label="Projects"
+                label="Projeto"
                 icon={<InventoryIcon />}
                 value="/projects"
                 component={LinkRouter}
@@ -142,7 +142,7 @@ const Header = () => {
                 <ListItemIcon>
                   <CottageIcon />
                 </ListItemIcon>
-                <ListItemText primary={"Home"} />
+                <ListItemText primary="Página inicial" secondary="Home" />
               </ListItemButton>
 
               <ListItemButton
@@ -155,7 +155,7 @@ const Header = () => {
                 <ListItemIcon>
                   <InfoIcon />
                 </ListItemIcon>
-                <ListItemText primary={"About"} />
+                <ListItemText primary="Sobre Mim" secondary="About me" />
               </ListItemButton>
 
               <ListItemButton
@@ -169,7 +169,7 @@ const Header = () => {
                 <ListItemIcon>
                   <EmailIcon />
                 </ListItemIcon>
-                <ListItemText primary={"Contact"} />
+                <ListItemText primary="Contato" secondary="Contact" />
               </ListItemButton>
 
               <ListItemButton
@@ -182,7 +182,7 @@ const Header = () => {
                 <ListItemIcon>
                   <InventoryIcon />
                 </ListItemIcon>
-                <ListItemText primary={"Projects"} />
+                <ListItemText primary="Projeto" secondary="Project" />
               </ListItemButton>
 
               <Divider />
@@ -198,7 +198,7 @@ const Header = () => {
                   <ListItemIcon>
                     <GitHubIcon />
                   </ListItemIcon>
-                  <ListItemText primary={"Github"} />
+                  <ListItemText primary="Github" secondary="External page" />
                 </ListItemButton>
               </Link>
 
@@ -213,7 +213,7 @@ const Header = () => {
                   <ListItemIcon>
                     <LinkedInIcon />
                   </ListItemIcon>
-                  <ListItemText primary={"LinkedIn"} />
+                  <ListItemText primary="LinkedIn" secondary="External page" />
                 </ListItemButton>
               </Link>
             </ListItem>

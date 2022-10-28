@@ -47,7 +47,7 @@ const Home = () => {
               flexWrap="wrap"
               justifyContent="center"
             >
-              <Grow in={true} timeout={2000}>
+              <Grow in={true} timeout={1000}>
                 <Button
                   variant="contained"
                   size="large"
@@ -71,7 +71,7 @@ const Home = () => {
                 </Button>
               </Grow>
 
-              <Grow in={true} timeout={1000}>
+              <Grow in={true} timeout={1800}>
                 <Button
                   variant="contained"
                   size="large"

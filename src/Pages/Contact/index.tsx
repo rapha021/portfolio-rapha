@@ -68,7 +68,7 @@ const Contact = () => {
                 endIcon={<ContentPasteGo />}
                 onClick={() => {
                   setEmail(true)
-                  navigator.clipboard.writeText("rapha.gloria@gmail.com")
+                  navigator.clipboard.writeText("contato@raphaelgloria.com")
                   toast.info("Email copiado!", {
                     autoClose: 2300,
                     theme: dark ? "dark" : "light",

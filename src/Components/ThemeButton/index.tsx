@@ -93,11 +93,9 @@ const ThemeButton = () => {
         </DialogContent>
 
         <DialogActions>
-          <Link href="/assets/cv.docx" download underline="none">
-            <Button variant="text" endIcon={<Download />}>
-              Baixar
-            </Button>
-          </Link>
+          <Button variant="text" endIcon={<Download />} disabled>
+            Baixar
+          </Button>
 
           <Link
             href="https://docs.google.com/document/d/1ps8mAgv4f5iAz5kmBRFpcpS5aBn_TnpMNcqFEm8ezaE/edit?usp=sharing"

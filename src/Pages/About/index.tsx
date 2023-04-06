@@ -6,8 +6,8 @@ import {
   Paper,
   Stack,
   Typography,
-} from "@mui/material"
-import "./style.css"
+} from "@mui/material";
+import "./style.css";
 
 const About = () => {
   const my_techs = [
@@ -22,6 +22,10 @@ const About = () => {
     {
       img: "assets/icons/node.svg",
       name: "Node Js",
+    },
+    {
+      img: "assets/icons/jestjs.svg",
+      name: "Jest",
     },
     {
       img: "assets/icons/materialui.svg",
@@ -39,7 +43,7 @@ const About = () => {
       img: "assets/icons/django.svg",
       name: "Django",
     },
-  ]
+  ];
 
   return (
     <>
@@ -83,7 +87,7 @@ const About = () => {
         </Stack>
       </Fade>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

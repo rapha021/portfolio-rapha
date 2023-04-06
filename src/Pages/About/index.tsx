@@ -6,10 +6,45 @@ import {
   Paper,
   Stack,
   Typography,
-} from "@mui/material"
-import "./style.css"
+} from "@mui/material";
+import "./style.css";
 
 const About = () => {
+  const my_techs = [
+    {
+      img: "assets/icons/react.svg",
+      name: "React",
+    },
+    {
+      img: "assets/icons/ts.svg",
+      name: "Typescript",
+    },
+    {
+      img: "assets/icons/node.svg",
+      name: "Node Js",
+    },
+    {
+      img: "assets/icons/jestjs.svg",
+      name: "Jest",
+    },
+    {
+      img: "assets/icons/materialui.svg",
+      name: "Material UI",
+    },
+    {
+      img: "assets/icons/git.svg",
+      name: "Git",
+    },
+    {
+      img: "assets/icons/python.svg",
+      name: "Python",
+    },
+    {
+      img: "assets/icons/django.svg",
+      name: "Django",
+    },
+  ];
+
   return (
     <>
       <Fade in={true}>
@@ -34,33 +69,25 @@ const About = () => {
             divider={<Divider orientation="vertical" flexItem />}
             spacing={2}
             height="fit-content"
-            width="100%"
+            width="80%"
+            rowGap="30px"
             justifyContent="center"
+            flexWrap="wrap"
           >
-            <Grow in={true} {...{ timeout: 1000 }}>
-              <img src="assets/icons/react.svg" className="techIcon" />
-            </Grow>
-
-            <Grow in={true} {...{ timeout: 1200 }}>
-              <img src="assets/icons/ts.svg" className="techIcon" />
-            </Grow>
-
-            <Grow in={true} {...{ timeout: 1400 }}>
-              <img src="assets/icons/node.svg" className="techIcon" />
-            </Grow>
-
-            <Grow in={true} {...{ timeout: 1600 }}>
-              <img src="assets/icons/materialui.svg" className="techIcon" />
-            </Grow>
-
-            <Grow in={true} {...{ timeout: 1800 }}>
-              <img src="assets/icons/git.svg" className="techIcon" />
-            </Grow>
+            {my_techs.map((tech) => (
+              <Grow in={true} {...{ timeout: 1000 }} key={tech.name + "grow"}>
+                <img
+                  src={tech.img}
+                  className="techIcon"
+                  key={tech.name + "img"}
+                />
+              </Grow>
+            ))}
           </Stack>
         </Stack>
       </Fade>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

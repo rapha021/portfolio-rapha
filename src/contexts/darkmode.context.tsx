@@ -22,6 +22,12 @@ const ThemeProvider = ({ children }: IThemeProps) => {
     const theme = JSON.parse(localStorage.getItem("@Rapha:dark")!)
 
     theme ? setDark(true) : setDark(false)
+
+    const system_theme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches
+
+    system_theme ? setDark(true) : setDark(false)
   }, [])
 
   const handleTheme = () => {

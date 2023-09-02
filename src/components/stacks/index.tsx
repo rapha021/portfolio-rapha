@@ -3,9 +3,11 @@ const Stacks = () => {
     <>
       <section className="w-full h-fit px-6 py-6 box-border flex items-center justify-between rounded-xl shadow-lg bg-gradient-to-br from-[rgba(253,253,253)] to-[#e9fcff] dark:from-[rgba(70,70,70,0.3)] dark:to-[rgba(31,87,97,0.7)] backdrop-blur-sm font-poppins">
         <div className="w-full h-[80%] font-poppins flex flex-col items-center gap-3">
-          <h2 className="text-[58px] font-bold text-blue-400">My Stacks</h2>
+          <h2 className="text-[38px] md:text-[58px] font-bold text-blue-400">
+            My Stacks
+          </h2>
 
-          <p className="text-[16px] text-blue-200">
+          <p className="text-[14px] md:text-[16px] text-blue-200">
             Technologies that I have been working and learning
           </p>
 

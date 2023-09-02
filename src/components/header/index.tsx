@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full h-16 backdrop-blur-lg pl-6 pr-6 xl:pr-24 xl:pl-24 flex justify-center fixed z-10 bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(43,23,54,0.4)]">
+      <header className="w-full h-16 backdrop-blur-lg pl-6 pr-6 xl:pr-24 xl:pl-24 flex justify-center fixed z-10 bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(86,52,104,0.4)]">
         <div
           id="container"
           className="w-[1280px] h-full flex items-center justify-between gap-4"

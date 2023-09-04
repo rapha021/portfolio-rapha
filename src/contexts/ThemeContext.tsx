@@ -40,9 +40,10 @@ export function ThemeProvider({ children }: IThemeProvider) {
 
   const getCurrentTheme = () => {
     const colorTheme = localStorage.getItem("dark");
+    const userSystemCurrentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 
     if (colorTheme === null) {
-      localStorage.setItem("dark", JSON.stringify({ dark: isDark }));
+      localStorage.setItem("dark", JSON.stringify({ dark: userSystemCurrentTheme }));
     } else {
       const colorThemeParsed: ColorThemeType = JSON.parse(colorTheme);
       setIsDark(colorThemeParsed.dark);

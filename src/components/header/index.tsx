@@ -1,5 +1,9 @@
 import { FaGithub, FaLinkedin, FaFilePdf, FaMoon } from "react-icons/fa6";
-import { BsFillBoxSeamFill, BsFillSunFill } from "react-icons/bs";
+import {
+  BsFillBoxSeamFill,
+  BsFillMoonFill,
+  BsFillSunFill,
+} from "react-icons/bs";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -17,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-10 flex justify-center w-full h-16 pl-6 pr-6 backdrop-blur-xl xl:pr-24 xl:pl-24 bg-gray-500/10 dark:bg-purple-950/20">
+      <header className="sticky top-0 z-10 flex justify-center w-full h-16 pl-6 pr-6 backdrop-blur-2xl xl:pr-24 xl:pl-24 bg-gray-500/10 dark:bg-purple-950/20">
         <div
           id="container"
           className="w-[1280px] h-full flex items-center justify-between gap-4"
@@ -76,13 +80,13 @@ const Header = () => {
                 />
               </a>
               <button onClick={() => toggleCurrentTheme(!isDark)}>
-                {!isDark ? (
-                  <FaMoon
+                {isDark ? (
+                  <BsFillSunFill
                     size="30px"
                     className="duration-200 text-slate-600 hover:text-slate-700 dark:hover:text-slate-100 dark:text-gray-300"
                   />
                 ) : (
-                  <BsFillSunFill
+                  <FaMoon
                     size="30px"
                     className="duration-200 text-slate-600 hover:text-slate-700 dark:hover:text-slate-100 dark:text-gray-300"
                   />
@@ -106,7 +110,7 @@ const Header = () => {
 
       <section
         className={twMerge(
-          "fixed w-full h-96 left-0 top-16 py-12 px-12 flex flex-col justify-between dark:bg-purple-950/30 bg-gray-500/20 rounded-b-xl z-50 backdrop-blur-xl font-dm-sans",
+          "fixed w-full h-96 left-0 top-16 py-12 px-12 flex flex-col justify-between dark:bg-purple-950/20 bg-gray-500/10 rounded-b-xl z-50 backdrop-blur-2xl dark:backdrop-blur-xl font-dm-sans",
           isOpen ? "flex" : "hidden"
         )}
       >
@@ -171,6 +175,20 @@ const Header = () => {
         >
           <BiSolidUserVoice size="24px" />
           <button>Contact</button>
+        </a>
+
+        <hr />
+
+        <a
+          className="h-fit flex items-center justify-start gap-3 text-xl"
+          onClick={() => toggleCurrentTheme(!isDark)}
+        >
+          {isDark ? (
+            <BsFillSunFill size="24px" />
+          ) : (
+            <BsFillMoonFill size="24px" />
+          )}
+          <button>{isDark ? "Light mode" : "Dark mode"}</button>
         </a>
       </section>
     </>

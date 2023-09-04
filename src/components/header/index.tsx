@@ -1,34 +1,10 @@
 import { FaGithub, FaLinkedin, FaFilePdf, FaMoon } from "react-icons/fa6";
 import { BsFillSunFill } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useEffect, useState } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Header = () => {
-  const [isDark, setIsDark] = useState<boolean>(true);
-
-  useEffect(() => {
-    const colorTheme = localStorage.getItem("dark");
-
-    colorTheme === "true" && setIsDark(true);
-  }, []);
-
-  const toggleCurrentTheme = () => {
-    const root = document.getElementById("root");
-
-    isDark ? root?.classList.add("dark") : root?.classList.remove("dark");
-
-    localStorage.setItem("dark", `${isDark}`);
-  };
-
-  useEffect(() => {
-    const colorTheme = localStorage.getItem("dark");
-
-    if (colorTheme === null) {
-      localStorage.setItem("dark", `${isDark}`);
-    }
-
-    toggleCurrentTheme();
-  }, [isDark]);
+  const { isDark, toggleCurrentTheme } = useTheme();
 
   return (
     <>
@@ -80,8 +56,8 @@ const Header = () => {
                   className="text-slate-600 hover:text-slate-700 dark:hover:text-slate-100 dark:text-gray-300 duration-200"
                 />
               </a>
-              <button onClick={() => setIsDark(!isDark)}>
-                {isDark ? (
+              <button onClick={() => toggleCurrentTheme(!isDark)}>
+                {!isDark ? (
                   <FaMoon
                     size="30px"
                     className="text-slate-600 hover:text-slate-700 dark:hover:text-slate-100 dark:text-gray-300 duration-200"

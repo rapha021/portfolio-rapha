@@ -5,12 +5,12 @@ import { useTheme } from "../../contexts/ThemeContext";
 import { ElementType, useState } from "react";
 import MobileMenu from "./mobile";
 
-interface IMenuActions {
+export interface IMenuActions {
   title: string;
   link: string | undefined;
 }
 
-interface IMenuIcons {
+export interface IMenuIcons {
   icon: ElementType;
   link: string;
 }

@@ -3,7 +3,10 @@ import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <footer className="w-full h-80 lg:h-52 flex justify-center px-6 lg:px-24 font-dm-sans dark:text-gray-50">
+      <footer
+        className="w-full h-80 lg:h-52 flex justify-center px-6 lg:px-24 font-dm-sans dark:text-gray-50"
+        id="socials"
+      >
         <div
           id="container"
           className="w-full max-w-[1280px] h-full flex flex-col gap-3 justify-evenly "
@@ -76,9 +79,9 @@ const Footer = () => {
                   target="_blank"
                   className="hover:text-purple-600 dark:hover:text-purple-300"
                 >
-                  Pavan MG
+                  Pavan MG 
                 </a>
-                design
+                &nbsp;design
               </p>
             </div>
           </section>

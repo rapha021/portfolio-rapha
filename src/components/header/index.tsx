@@ -44,7 +44,7 @@ const Header = () => {
           <section className="hidden gap-4 md:flex">
             <div className="w-fit h-full flex gap-4 justify-end items-center font-['DM Sans'] font-dm-sans">
               {MenuActions.map((action) => (
-                <a href={action.link}>
+                <a href={action.link} key={action.title}>
                   <button className="w-20 h-8 duration-200 rounded-md text-slate-600 hover:bg-slate-600 hover:text-white dark:text-gray-100 dark:hover:bg-slate-500">
                     {action.title}
                   </button>
@@ -53,7 +53,7 @@ const Header = () => {
             </div>
             <div className="flex gap-3">
               {MenuIcons.map((icon) => (
-                <a href={icon.link} target="_blank">
+                <a href={icon.link} target="_blank" key={icon.link}>
                   {
                     <icon.icon
                       size="30px"

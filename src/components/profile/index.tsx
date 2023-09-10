@@ -16,7 +16,7 @@ const Profile = () => {
             Raphael G.
           </p>
           <p className="text-[38px] md:text-[42px] lg:text-[58px] font-bold text-gray-700 dark:text-purple-200">
-            Fullstack Developer
+            I'm a Fullstack Developer
           </p>
         </div>
       </section>

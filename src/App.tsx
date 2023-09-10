@@ -1,6 +1,7 @@
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Profile from "./components/profile";
+import Projects from "./components/projects";
 import Stacks from "./components/stacks";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         >
           <Profile />
           <Stacks />
+          <Projects />
         </div>
       </section>
       <Footer />

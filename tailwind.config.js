@@ -6,7 +6,12 @@ export default {
       "dm-sans": ["DM Sans", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      screens: {
+        sm: "400px",
+        md: "600px",
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

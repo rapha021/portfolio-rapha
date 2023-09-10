@@ -49,7 +49,7 @@ const Footer = () => {
           <hr />
 
           <section className="w-full flex lg:justify-between items-center flex-col lg:flex-row gap-3 lg:gap-0 pl-6 pr-6">
-            <div className="flex gap-6">
+            <div className="flex gap-x-2 flex-wrap justify-center sm:gap-6">
               <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Home
               </button>

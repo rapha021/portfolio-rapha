@@ -9,7 +9,7 @@ import { GoShare } from "react-icons/go";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../contexts/ThemeContext";
 import { IMenuActions } from ".";
-import { ElementType } from "react";
+import React, { ElementType } from "react";
 
 interface IMobileMenu {
   isOpen: boolean;
@@ -47,7 +47,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: IMobileMenu) => {
           )}
         >
           {MenuActions.map((button) => (
-            <>
+            <React.Fragment key={button.title}>
               <a
                 href={button.link}
                 className="h-fit flex items-center justify-start gap-3 text-xl"
@@ -60,7 +60,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: IMobileMenu) => {
               </a>
 
               <hr />
-            </>
+            </React.Fragment>
           ))}
 
           <a

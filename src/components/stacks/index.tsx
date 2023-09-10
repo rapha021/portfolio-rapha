@@ -1,4 +1,21 @@
+interface IStack {
+  title: string;
+  src: string;
+}
+
 const Stacks = () => {
+  const stacks: Array<IStack> = [
+    { title: "github", src: "/logos/github.svg" },
+    { title: "css", src: "/logos/css.svg" },
+    { title: "git", src: "/logos/git.svg" },
+    { title: "html", src: "/logos/html.svg" },
+    { title: "typescript", src: "/logos/typescript.svg" },
+    { title: "postgresql", src: "/logos/postgresql.svg" },
+    { title: "python", src: "/logos/python.svg" },
+    { title: "sass", src: "/logos/sass.svg" },
+    { title: "nodejs", src: "/logos/nodejs.svg" },
+    { title: "tailwind", src: "/logos/tailwind.svg" },
+  ];
   return (
     <>
       <section
@@ -15,34 +32,14 @@ const Stacks = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 pt-6">
-            <img src="/logos/github.svg" alt="github logo" />
-            <img src="/logos/css.svg" alt="css logo" />
-            <img src="/logos/git.svg" alt="git logo" />
-            <img src="/logos/html.svg" alt="html logo" />
-            <img src="/logos/js.svg" alt="javascript logo" />
-            <img
-              src="/logos/typescript.svg"
-              alt="typescript logo"
-              className="w-[106px]"
-            />
-            <img src="/logos/react.svg" alt="react logo" />
-            <img
-              src="/logos/postgresql.svg"
-              alt="postgresql logo"
-              className="w-[110px]"
-            />
-            <img
-              src="/logos/python.svg"
-              alt="python logo"
-              className="w-[110px]"
-            />
-            <img src="/logos/sass.svg" alt="sass logo" />
-            <img
-              src="/logos/nodejs.svg"
-              alt="node javascript logo"
-              className="w-[100px]"
-            />
-            <img src="/logos/tailwind.svg" alt="tailwind logo" />
+            {stacks.map((s) => (
+              <img
+                src={s.src}
+                key={s.title}
+                alt={`${s.title} logo`}
+                className="w-14 sm:w-16 md:w-24 lg:w-32 draggable"
+              />
+            ))}
           </div>
         </div>
       </section>

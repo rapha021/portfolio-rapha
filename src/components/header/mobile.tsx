@@ -42,7 +42,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: IMobileMenu) => {
       >
         <div
           className={twMerge(
-            "h-full flex flex-col justify-between transition-transform duration-1000",
+            "h-full flex flex-col justify-between transition-all duration-1000",
             isOpen ? "opacity-100" : "opacity-0 duration-200"
           )}
         >

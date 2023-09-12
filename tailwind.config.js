@@ -10,6 +10,7 @@ export default {
       screens: {
         sm: "400px",
         md: "600px",
+        mdPlus: "800px",
       },
     },
   },

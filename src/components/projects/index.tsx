@@ -29,6 +29,7 @@ export interface IProject {
   stacks: Array<IStack>;
   demoLink: string;
   repoLink: string;
+  ytbEnd: string;
 }
 
 const Projects = () => {
@@ -52,6 +53,7 @@ const Projects = () => {
       ],
       demoLink: "https://cnab-rapha021.vercel.app/login",
       repoLink: "https://github.com/rapha021/desafio-backend-python",
+      ytbEnd: "a3ICNMQW7Ok",
     },
     {
       imgLink: "https://source.unsplash.com/featured/300x201",
@@ -69,6 +71,7 @@ const Projects = () => {
       ],
       demoLink: "https://agenda-fullstack-rapha021.vercel.app/login",
       repoLink: "https://github.com/rapha021/agenda_fullstack_ts",
+      ytbEnd: "a3ICNMQW7Ok",
     },
     {
       imgLink: "https://source.unsplash.com/featured/300x201",
@@ -84,6 +87,7 @@ const Projects = () => {
       ],
       demoLink: "http://kenziehub.raphaelgloria.com/",
       repoLink: "https://github.com/rapha021/kenziehub",
+      ytbEnd: "a3ICNMQW7Ok",
     },
     {
       imgLink: "https://source.unsplash.com/featured/300x201",
@@ -97,6 +101,7 @@ const Projects = () => {
       ],
       demoLink: "http://nukenzie.raphaelgloria.com/",
       repoLink: "https://github.com/rapha021/nukenzie",
+      ytbEnd: "a3ICNMQW7Ok",
     },
   ];
 

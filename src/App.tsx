@@ -2,9 +2,16 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Profile from "./components/profile";
 import Projects from "./components/projects";
+import StackModal from "./components/stackModal";
 import Stacks from "./components/stacks";
+import { useModal } from "./contexts/ModalContext";
 
 function App() {
+  const {
+    isMounted,
+    modalContent: { title, ytbEnd },
+  } = useModal();
+
   return (
     <div id="main" className="dark:bg-gray-900">
       <Header />
@@ -19,6 +26,7 @@ function App() {
         </div>
       </section>
       <Footer />
+      {isMounted && <StackModal title={title} ytbEnd={ytbEnd} />}
     </div>
   );
 }

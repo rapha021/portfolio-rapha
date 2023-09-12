@@ -1,19 +1,31 @@
 import { BsLink45Deg } from "react-icons/bs";
 import { IProject } from ".";
 import { FaGithub } from "react-icons/fa6";
+import { useModal } from "../../contexts/ModalContext";
+import { AiOutlinePlayCircle } from "react-icons/ai";
 
 interface IprojectPreview {
   project: IProject;
 }
 
 const ProjectPreview = ({ project: p }: IprojectPreview) => {
+  const { openModal } = useModal();
+
   return (
     <>
       <div
         className="bg-rose-900 w-[230px] sm:w-[300px] lg:w-[350px] flex flex-col rounded-xl text-white"
         id="project-1"
       >
-        <div id="project-image">
+        <div id="project-image" className="w-full h-fit relative cursor-pointer">
+          <div
+            className="w-full h-full absolute flex justify-center items-center opacity-0 transition-all duration-200 rounded-t-xl hover:opacity-100 hover:bg-[rgba(0,0,0,0.5)]"
+            onClick={() => {
+              openModal(p.title, p.ytbEnd);
+            }}
+          >
+            <AiOutlinePlayCircle className="" size="56px" />
+          </div>
           <img
             src={p.imgLink}
             alt={`${p.title} preview image`}

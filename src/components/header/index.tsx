@@ -41,7 +41,7 @@ const Header = () => {
           className="w-[1280px] h-full flex items-center justify-between gap-4"
         >
           Logo aqui
-          <section className="hidden gap-4 md:flex">
+          <section className="hidden gap-4 mdPlus:flex">
             <div className="w-fit h-full flex gap-4 justify-end items-center font-['DM Sans'] font-dm-sans">
               {MenuActions.map((action) => (
                 <a href={action.link} key={action.title}>
@@ -80,7 +80,7 @@ const Header = () => {
           </section>
           {/* mobile hamburguer menu */}
           <section
-            className="flex md:hidden"
+            className="flex mdPlus:hidden"
             onClick={() => setIsOpen((state) => !state)}
           >
             {isOpen ? (

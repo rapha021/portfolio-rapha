@@ -1,4 +1,4 @@
-import { FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -12,9 +12,7 @@ const Footer = () => {
           className="w-full max-w-[1280px] h-full flex flex-col gap-3 justify-evenly "
         >
           <section className="w-full flex justify-between items-center flex-col lg:flex-row pt-6 lg:px-6">
-            <p>Logo aqui</p>
-
-            <div className="h-full flex gap-6 items-center flex-col lg:flex-row lg:gap-20">
+            <div className="w-full h-full flex gap-6 items-center justify-center flex-col lg:flex-row lg:gap-20">
               <p>+55 21 97739-3115</p>
               <p>contato@raphaelgloria.com</p>
 
@@ -36,12 +34,12 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="#" target="_blank">
+                {/* <a href="#" target="_blank">
                   <FaFilePdf
                     size="30px"
                     className="text-slate-600 hover:text-slate-700 dark:hover:text-slate-500"
                   />
-                </a>
+                </a> */}
               </div>
             </div>
           </section>
@@ -50,9 +48,9 @@ const Footer = () => {
 
           <section className="w-full flex lg:justify-between items-center flex-col lg:flex-row gap-3 lg:gap-0 pl-6 pr-6">
             <div className="flex gap-x-2 flex-wrap justify-center sm:gap-6">
-              <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
+              {/* <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Home
-              </button>
+              </button> */}
               <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 About
               </button>
@@ -62,9 +60,9 @@ const Footer = () => {
               <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Projects
               </button>
-              <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
+              {/* <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Contact
-              </button>
+              </button> */}
             </div>
 
             <div className="flex flex-col items-center">
@@ -79,7 +77,7 @@ const Footer = () => {
                   target="_blank"
                   className="hover:text-purple-600 dark:hover:text-purple-300"
                 >
-                  Pavan MG 
+                  Pavan MG
                 </a>
                 &nbsp;design
               </p>

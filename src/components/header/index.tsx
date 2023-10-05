@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaFilePdf, FaMoon } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaMoon } from "react-icons/fa6";
 import { BsFillSunFill } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -20,17 +20,16 @@ const Header = () => {
   const { isDark, toggleCurrentTheme } = useTheme();
 
   const MenuActions: Array<IMenuActions> = [
-    { title: "Home", link: "#home" },
     { title: "About", link: "#home" },
     { title: "Stacks", link: "#stacks" },
     { title: "Projects", link: "#projects" },
-    { title: "Contact", link: "#contact" },
+    // { title: "Contact", link: "#contact" },
   ];
 
   const MenuIcons: Array<IMenuIcons> = [
     { icon: FaGithub, link: "https://github.com/rapha021" },
     { icon: FaLinkedin, link: "https://www.linkedin.com/in/raphaelgloria/" },
-    { icon: FaFilePdf, link: "#" },
+    // { icon: FaFilePdf, link: "#" },
   ];
 
   return (
@@ -38,9 +37,8 @@ const Header = () => {
       <header className="sticky top-0 z-10 flex justify-center w-full h-16 pl-6 pr-6 backdrop-blur-2xl xl:pr-24 xl:pl-24 bg-gray-500/10 dark:bg-purple-950/20">
         <div
           id="container"
-          className="w-[1280px] h-full flex items-center justify-between gap-4"
+          className="w-[1280px] h-full flex items-center justify-end gap-4"
         >
-          Logo aqui
           <section className="hidden gap-4 mdPlus:flex">
             <div className="w-fit h-full flex gap-4 justify-end items-center font-['DM Sans'] font-dm-sans">
               {MenuActions.map((action) => (

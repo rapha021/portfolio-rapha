@@ -1,18 +1,16 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { BrowserRouter } from "react-router-dom"
-import App from "./App"
-import ThemeProvider from "./contexts/darkmode.context"
-import { ToastContainer } from "react-toastify"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { ThemeProvider } from "./contexts/ThemeContext.tsx";
+import { ModalProvider } from "./contexts/ModalContext.tsx";
 
-import "./index.css"
-import "react-toastify/dist/ReactToastify.css"
-
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <BrowserRouter>
-    <ToastContainer />
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </BrowserRouter>
-)
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ModalProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ModalProvider>
+  </React.StrictMode>
+);

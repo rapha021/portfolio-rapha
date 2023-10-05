@@ -1,34 +1,34 @@
-import { ThemeProvider } from "@mui/material"
-import Header from "./Components/Header"
-import ThemeButton from "./Components/ThemeButton"
-import { useThemeContext } from "./contexts/darkmode.context"
-import GlobalStyle, { Container } from "./globalStyle"
-import MainRoutes from "./routes/routes"
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Profile from "./components/profile";
+import Projects from "./components/projects";
+import StackModal from "./components/stackModal";
+import Stacks from "./components/stacks";
+import { useModal } from "./contexts/ModalContext";
 
 function App() {
-  const { dark, theme } = useThemeContext()
-
-  const color = dark ? "#272727" : "#E91E63"
-
-  document
-    .querySelector('meta[name="theme-color"]')
-    ?.setAttribute("content", color)
+  const {
+    isMounted,
+    modalContent: { title, ytbEnd },
+  } = useModal();
 
   return (
-    <>
-      <GlobalStyle dark={dark} palette={theme.palette} />
-
-      <ThemeProvider theme={theme}>
-        <Container>
-          <Header />
-
-          <MainRoutes />
-
-          <ThemeButton />
-        </Container>
-      </ThemeProvider>
-    </>
-  )
+    <div id="main" className="dark:bg-gray-900">
+      <Header />
+      <section className="flex justify-center pt-10">
+        <div
+          id="wrapper"
+          className="w-full max-w-[1280px] h-full px-6 xl:px-0 flex flex-col gap-10"
+        >
+          <Profile />
+          <Stacks />
+          <Projects />
+        </div>
+      </section>
+      <Footer />
+      {isMounted && <StackModal title={title} ytbEnd={ytbEnd} />}
+    </div>
+  );
 }
 
-export default App
+export default App;

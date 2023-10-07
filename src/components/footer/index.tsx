@@ -51,15 +51,24 @@ const Footer = () => {
               {/* <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Home
               </button> */}
-              <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
-                About
-              </button>
-              <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
-                Techs
-              </button>
-              <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
-                Projects
-              </button>
+              <a
+                href="#home"
+                className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 "
+              >
+                Sobre Mim
+              </a>
+              <a
+                href="#stacks"
+                className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 "
+              >
+                Stacks
+              </a>
+              <a
+                href="#projects"
+                className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 "
+              >
+                Projetos
+              </a>
               {/* <button className="h-8 rounded-md text-slate-600 dark:text-gray-100 hover:text-slate-900 ">
                 Contact
               </button> */}

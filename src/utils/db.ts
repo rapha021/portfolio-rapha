@@ -18,7 +18,8 @@ import { TbApi } from "react-icons/tb";
 
 export const projects: Array<IProject> = [
   {
-    imgLink: "https://source.unsplash.com/featured/300x201",
+    imgLink:
+      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     title: "Gerenciador de finanças",
     description:
       "Uma aplicação importa arquivos CNAB e simplifica a análise e gestão de atividades financeiras dos usuários.",
@@ -39,7 +40,8 @@ export const projects: Array<IProject> = [
     ytbEnd: "j1Y3GFa_kKk",
   },
   {
-    imgLink: "https://source.unsplash.com/featured/300x201",
+    imgLink:
+      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     title: "Agenda de contatos",
     description:
       "Um app de agenda de contatos simplifica o armazenamento e gerenciamento de informações, facilitando a comunicação e a gestão de relacionamentos.",
@@ -57,7 +59,8 @@ export const projects: Array<IProject> = [
     ytbEnd: "Er-YAwYChlQ",
   },
   {
-    imgLink: "https://source.unsplash.com/featured/300x201",
+    imgLink:
+      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     title: "Kenzie Hub",
     description:
       "Aplicação para gerenciamento de tecnologias que o usuario domina utilizando uma API Rest.",
@@ -73,7 +76,8 @@ export const projects: Array<IProject> = [
     ytbEnd: "WQKfGyibG_k",
   },
   {
-    imgLink: "https://source.unsplash.com/featured/300x201",
+    imgLink:
+      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     title: "NuKenzie",
     description:
       "NuKenzie, uma aplicação para gerenciamento de gastos, cadastrando entradas e saídas.",

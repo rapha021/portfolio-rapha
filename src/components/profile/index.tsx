@@ -37,7 +37,7 @@ const Profile = () => {
             href="https://www.linkedin.com/in/raphaelgloria/"
             className="flex flex-col gap-2 items-center justify-center hover:text-purple-400 transition-all"
           >
-            <BsLinkedin size="38" className="text-purple-200" />
+            <BsLinkedin size="38" className="text-purple-900 dark:text-purple-200" />
             <article>Linkedin</article>
           </a>
 
@@ -46,7 +46,7 @@ const Profile = () => {
             target="_blank"
             className="flex flex-col gap-2 items-center justify-center hover:text-purple-400 transition-all"
           >
-            <BsGithub size="38" className="text-purple-200" />
+            <BsGithub size="38" className="text-purple-900 dark:text-purple-200" />
             <article>Github</article>
           </a>
 
@@ -55,7 +55,7 @@ const Profile = () => {
             className="flex flex-col gap-2 items-center justify-center hover:text-purple-400 transition-all"
             onClick={Notify}
           >
-            <BiMailSend size="42" className="text-purple-200" />
+            <BiMailSend size="42" className="text-purple-900 dark:text-purple-200" />
             <article>E-Mail</article>
           </a>
         </div>

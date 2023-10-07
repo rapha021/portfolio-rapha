@@ -24,11 +24,11 @@ const Stacks = () => {
       >
         <div className="w-full h-[80%] font-poppins flex flex-col items-center gap-3">
           <h2 className="text-[38px] md:text-[58px] font-bold text-blue-400">
-            My Stacks
+            Minhas Stacks
           </h2>
 
           <p className="text-[14px] md:text-[16px] text-blue-200">
-            Technologies that I have been working and learning
+            Tecnologias que tenho trabalhado e aprendido.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 pt-6">

@@ -3,9 +3,8 @@ import {
   BsFillMoonFill,
   BsFillSunFill,
 } from "react-icons/bs";
-import { AiFillHome, AiFillInfoCircle } from "react-icons/ai";
-import { BiCodeAlt, BiSolidUserVoice } from "react-icons/bi";
-import { GoShare } from "react-icons/go";
+import { AiFillInfoCircle } from "react-icons/ai";
+import { BiCodeAlt } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../contexts/ThemeContext";
 import { IMenuActions } from ".";
@@ -24,12 +23,9 @@ const MobileMenu = ({ isOpen, setIsOpen }: IMobileMenu) => {
   const { isDark, toggleCurrentTheme } = useTheme();
 
   const MenuActions: Array<IMenuActionsMobile> = [
-    { title: "Home", link: "#home", icon: AiFillHome },
     { title: "About", link: "#home", icon: AiFillInfoCircle },
     { title: "Stacks", link: "#stacks", icon: BiCodeAlt },
     { title: "Projects", link: "#projects", icon: BsFillBoxSeamFill },
-    { title: "Contact", link: "#contact", icon: BiSolidUserVoice },
-    { title: "Socials", link: "#socials", icon: GoShare },
   ];
 
   return (
@@ -59,7 +55,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: IMobileMenu) => {
                 <button>{button.title}</button>
               </a>
 
-              <hr />
+              <hr className="h-[0.5px] rounded-xl bg-gray-700 border-none dark:bg-slate-100" />
             </React.Fragment>
           ))}
 

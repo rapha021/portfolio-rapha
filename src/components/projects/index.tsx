@@ -26,11 +26,11 @@ const Projects = () => {
       >
         <div className="w-full h-[80%] font-poppins flex flex-col items-center gap-3">
           <h2 className="text-[38px] md:text-[58px] font-bold text-rose-500">
-            Projects
+            Projetos
           </h2>
 
           <p className="text-[14px] md:text-[16px] text-rose-300">
-            Projects I am currently involved in and have previously worked on.
+          Projetos em que estou envolvido atualmente e nos quais já trabalhei.
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center pt-6">

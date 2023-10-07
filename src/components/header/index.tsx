@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaMoon } from "react-icons/fa6";
+import { FaMoon } from "react-icons/fa6";
 import { BsFillSunFill } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -20,17 +20,17 @@ const Header = () => {
   const { isDark, toggleCurrentTheme } = useTheme();
 
   const MenuActions: Array<IMenuActions> = [
-    { title: "About", link: "#home" },
+    { title: "Sobre Mim", link: "#home" },
     { title: "Stacks", link: "#stacks" },
-    { title: "Projects", link: "#projects" },
+    { title: "Projetos", link: "#projects" },
     // { title: "Contact", link: "#contact" },
   ];
 
-  const MenuIcons: Array<IMenuIcons> = [
-    { icon: FaGithub, link: "https://github.com/rapha021" },
-    { icon: FaLinkedin, link: "https://www.linkedin.com/in/raphaelgloria/" },
-    // { icon: FaFilePdf, link: "#" },
-  ];
+  // const MenuIcons: Array<IMenuIcons> = [
+  //   // { icon: FaGithub, link: "https://github.com/rapha021" },
+  //   // { icon: FaLinkedin, link: "https://www.linkedin.com/in/raphaelgloria/" },
+  //   // { icon: FaFilePdf, link: "#" },
+  // ];
 
   return (
     <>
@@ -50,7 +50,7 @@ const Header = () => {
               ))}
             </div>
             <div className="flex gap-3">
-              {MenuIcons.map((icon) => (
+              {/* {MenuIcons.map((icon) => (
                 <a href={icon.link} target="_blank" key={icon.link}>
                   {
                     <icon.icon
@@ -59,7 +59,7 @@ const Header = () => {
                     />
                   }
                 </a>
-              ))}
+              ))} */}
 
               <button onClick={() => toggleCurrentTheme(!isDark)}>
                 {isDark ? (
